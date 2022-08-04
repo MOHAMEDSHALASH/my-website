@@ -1,0 +1,228 @@
+/*  IN LOADING */
+.dark-mode .loading{
+    background-color: #f3f3f3;
+}
+.dark-mode .loading .load #progress::before{
+    border: 4px dashed #121a23;
+    border-right-color:transparent ;
+    border-bottom-color: transparent;
+}
+/* _____________ HR ___________________*/
+.dark-mode hr{
+    background-color: #fff;
+}
+/* up */
+.dark-mode .up{
+    background-color: #e5e5e5;
+}
+/* _____________________ */
+.dark-mode{
+    background-color:  #fff;
+    color: #000;
+}
+.dark-mode header {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.267);
+    background-color: #e5e5e5;
+}
+.dark-mode header .itemsINhead #items{
+    background-color: #ccc;
+    border: 2px solid #adadad;
+    border-top: none;
+}
+.dark-mode header .itemsINhead ul a{
+    color: #000;
+}
+/* _______________________________________________________________________________________________________________ */
+/* _________ MAIN _________ */
+.dark-mode main .title button{
+    background-color: #e5e5e5;
+    color: #000;
+}
+.dark-mode main .title button:hover{
+    color: #fff;
+}
+.dark-mode main .fa-linkedin-in,
+.dark-mode main .fa-facebook-f,
+.dark-mode main .fa-whatsapp,
+.dark-mode main .fa-instagram{
+    color: #000;
+}
+.dark-mode main::before{
+    border-color: transparent #e5e5e5 #e5e5e5 transparent;
+}
+/* __________________________________________ */
+/* Point Yellow IN back Ground */
+.dark-mode .point1{
+    box-shadow: 0px 0px 250px 50px #e5e5e5;
+}
+/* __________________________________________ */
+/* BAR */
+.dark-mode .bar,
+.dark-mode .bar-show{
+    background-color: #ccc;
+}
+.dark-mode .bar ul a{
+    color: #000;
+}
+.dark-mode .bar ul li{
+    background-color: #fff;
+    border-left: 0px solid #fff;
+}
+/* BAR SETTING */
+.dark-mode .setting,
+.dark-mode .setting-show{
+    background-color: #fff;
+}
+.dark-mode .setting .btnScroll,
+.dark-mode .setting .btnScroll-show{
+    background-color: #ccc;
+}
+.dark-mode .setting .btnScroll-show{
+    background-color: #333;
+}
+.dark-mode .setting .m,
+.dark-mode .setting #m-show{
+    border: 3px solid #ccc;
+}
+.dark-mode .setting .m-show{
+    border: 3px solid #333;
+}
+.dark-mode .setting .btnScroll2,
+.dark-mode .setting .btnScroll2-show{
+    background-color: #ccc;
+}
+.dark-mode .setting .btnScroll2-show{
+    background-color: #333;
+}
+.dark-mode .setting .s,
+.dark-mode .setting #s-show{
+    border: 3px solid #ccc;
+    background-color: #f00;
+}
+.dark-mode .setting .s-show{
+    border: 3px solid #333;
+}
+/* BAR CLOCK */
+.dark-mode .clock section{
+    background-color: #fff;
+}
+.dark-mode .clock .arrow{
+    border: 2px solid #fff;
+    border-left-color: red;
+}
+.dark-mode .clock .s2 .arrow::before{
+    background-color: green;
+}
+.dark-mode .clock .s2 .arrow{
+    border-left: 2px solid green;
+}
+.dark-mode .clock .s3 .arrow::before{
+    background-color:#eace31;
+}
+.dark-mode .clock .s3 .arrow{
+    border-left: 2px solid #eace31;
+}
+/* _______________________________________________________________________________________________________________ */
+/* _______________________________________________________________________________________________________________ */
+/* ___________PROJECTS INDEX2 PAGE _________*/
+.dark-mode .projects section{
+    background-color: #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.349);
+}
+.dark-mode .projects section .p{
+    color: #222;
+}
+/* FOOTER */
+.dark-mode footer{
+    border-top: .5px solid rgba(0, 0, 0, 0.331);
+}
+/* _______________________________________________________________________________________________________________ */
+/* MORE BTN */
+.dark-mode .btn-more,
+.dark-mode .btn-more-show{
+    background-color: #e5e5e5;
+}
+.dark-mode .btn-more section{
+    background-color: #ccc;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.406) ;
+}
+/*___________________ DESGIN 3 BOXES IN OFFER PAGE _____________________________________ */
+.dark-mode .product,.dark-mode .visual,.dark-mode .ui{
+    background-color: rgba(204, 204, 204, 0.491);
+}
+.dark-mode .product section,
+.dark-mode .visual section,
+.dark-mode .ui section{
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.489);
+}
+.dark-mode .product section .title p,
+.dark-mode .visual section .title p,
+.dark-mode .ui section .title p{
+    color: #222;
+}
+.dark-mode .product p,
+.dark-mode .visual p,
+.dark-mode .ui p{
+    color: #000;
+}
+/* ______________________________________________________________________________________ */
+/* __________________________OFFER PAGE______________________________________ */
+.dark-mode .offer section{
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.311);
+    color: #000;
+}
+.dark-mode .offer section::before,
+.dark-mode .offer section::after{
+    background-color: #e8e8e8d6;
+}
+/* _______________________________________________________________________________________________________________ */
+/* ___________ CONTACT _________*/
+.dark-mode .contact .left .items p{
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.479);
+}
+.dark-mode .contact .left .items .p1:hover,.dark-mode .contact .left .items .p2:hover,.dark-mode .contact .left .items .p4:hover{
+    color: #fff;
+}
+.dark-mode .contact .left .items .p3:hover:hover,.dark-mode .contact .left .items .p5:hover,.dark-mode .contact .left .items .p6:hover{
+    color: #fff;
+}
+.dark-mode .contact .left .items .p7:hover:hover{
+    color: #fff;
+}
+.dark-mode .contact form{
+    background-color: #ccc;
+}
+.dark-mode .contact form input{
+    background-color: #f3f3f3;
+}
+.dark-mode .contact form textarea{
+    background-color: #f3f3f3;
+}
+.dark-mode .contact .count{
+    color: #000;
+}
+.dark-mode .contact form button{
+    background-color: #f3f3f3;
+}
+.dark-mode .contact .left a{
+    color: #000;
+}
+/* SEARCH ______________ */
+.dark-mode #search-input{
+    background-color: #e5e5e5;
+    border: 2px solid #e5e5e5;
+    border-bottom-color: var(--main-color);
+}
+.dark-mode .searchIcon{
+    color: #000;
+}
+.dark-mode .contact .email{
+    color: #fff;
+}
+.dark-mode footer{
+    background-color: #e5e5e5;
+}

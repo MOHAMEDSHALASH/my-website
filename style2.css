@@ -1,0 +1,513 @@
+/* VIDEO IN LOADING */
+.loading{
+    position: fixed;
+    z-index: 110;
+    width: 100%;
+    text-align: center;
+    color: var(--main-color);
+    font-size: 18px;
+    height: 100vh;
+    background-color: #121a23;
+}
+.loading .p1{
+    margin-top: 33vh;
+    font-size: 25px;
+    font-family: monospace;
+}
+.loading .load{
+    margin-top:1.7cm;
+    direction: ltr;
+
+}
+.loading .load #progress{
+    position: relative;
+    width: 3cm;
+    height: 3cm;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5px solid var(--main-color);
+    border-left-color:transparent ;
+    border-top-color: transparent;
+    animation: 7s load infinite linear;
+}
+.loading .load #progress::before{
+    content: '';
+    position: absolute;
+    width: 2.3cm;
+    height: 2.3cm;
+    border-radius: 50%;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border: 4px dashed #fff;
+    border-right-color:transparent ;
+    border-bottom-color: transparent;
+    animation: 2s load infinite alternate;
+}
+.loading .load #progress::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    background-color: var(--main-color);
+    filter: blur(20px);
+}
+.loading  .fa-person-running{
+    margin-left: 10px;
+    animation: run 1s infinite linear;
+    transition: all 1s;
+}
+@keyframes load{
+    0%{
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+}
+@keyframes run{
+    0%,100%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(3deg);
+        transform: translateX(5px);
+    }
+}
+/* __________________________________________ */
+/* Point Yellow IN back Ground */
+.point1{
+    position: absolute;
+    z-index: -1;
+    top: 4.5cm;
+    left: 3cm;
+    width: 1px;
+    height: 1px;
+    background-color: #fbdf4200;
+    box-shadow: 0px 0px 250px 40px var(--main-color);
+}
+/* __________________________________________ */
+/* BAR */
+.bar,
+.bar-show{
+    position: fixed;
+    width: 8cm;
+    height: calc(100vh - 1cm);
+    margin-left: 100%;
+    background-color: #1c2733;
+    z-index: 80;
+    transition: all 1s;
+    overflow: scroll;
+}
+.bar-show{
+    margin-left: calc(100% - 8cm);
+}
+.bar ul{
+    margin: 10px 5px;
+}
+.bar ul a{
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
+.bar ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 6px;
+    background-color: #121a23;
+    height: .7cm;
+    border-left: 0px solid #121a2300;
+    cursor: pointer;
+    position: relative;
+}
+.bar ul li::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    background-color: var(--main-color);
+    left: 0;
+    bottom: 0;
+    transition: all 2s;
+}
+.bar ul li:hover::before{
+    width: 100%;
+}
+.bar ul li:hover{
+    background-color: rgba(255, 0, 0, 0.059);
+}
+.bar ul li:active{
+    transform: translateX(-10px);
+    border-left: 4px solid var(--main-color) !important;
+}
+.bar ul li .icon{
+    width: .3cm;
+    direction: rtl;
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+}
+.bar-active{
+    border-left: 4px solid var(--main-color) !important;
+}
+.bar hr{
+    border: none;
+    height: 1px;
+    background-color: var(--main-color);
+    margin: 20px 0;
+    width: 100%;
+}
+/* BAR SETTING */
+.setting,
+.setting-show{
+    background-color: #121a23;
+    position: relative;
+    margin-top: -5px;
+    padding: 0 10px 0 20px;
+    height: 0;
+    transition: all 1s;
+    overflow: hidden;
+}
+.setting-show{
+    height: 3cm;
+}
+.setting section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;
+}
+.setting .btnScroll,
+.setting .btnScroll-show{
+    width: 30px;
+    height: 15px;
+    background-color: #333;
+    border-radius: 15px;
+    position: relative;
+}
+.setting .btnScroll-show{
+    background-color: #f3f3f3;
+}
+.setting .m,
+.setting #m-show{
+    width: 15px;
+    height: 15px;
+    border: 3px solid #333;
+    border-radius: 15px;
+    background-color: var(--main-color);
+    transition: all .3s;
+}
+.setting .m-show{
+    margin-left: 15px;
+    border: 3px solid #f3f3f3;
+    background-color: var(--main-color);
+}
+.setting .m-open,
+.setting .m-close{
+    position: absolute;
+    width: 35px;
+    height: 25px;
+    background-color:transparent;
+    right: 8px;
+    top: 3%;
+    border-radius: 50%;
+    display: none;
+}
+.setting .m-close{
+    display: block;
+}
+/* COLORS */
+.colors-in-page{
+    width: 100%;
+}
+.colors-in-page ul{
+    text-align: left;
+}
+.colors-in-page ul p{
+    list-style: none;
+    width: 25px;
+    height: 25px ;
+    padding: 0;
+    background-color: #f00;
+    display: inline-block;
+    border-radius: 50%;
+    cursor:grab;
+    margin-right: 5px;
+    opacity: .5;
+}
+.colors-in-page ul p:nth-child(2){
+    background-color: #2570d3;
+}
+.colors-in-page ul p:nth-child(3){
+    background-color: #51ff00;
+}
+.colors-in-page ul p:nth-child(4){
+    background-color: #8a0191;
+}
+.colors-in-page ul p:nth-child(5){
+    background-color: #da006d;
+}
+.active-color{
+    opacity: 1 !important;
+    box-shadow: 0 0 15px var(--main-color),inset 2px 2px 5px #fff;
+}
+/* what about dark ? <= msg */
+.what-about-dark-mode{
+    position: absolute;
+    right: 14px;
+    top: 31px;
+    font-size: 22px;
+    cursor: help;
+}
+.what-about-dark-mode-msg,
+.what-about-dark-mode-msg-show{
+    position: absolute;
+    width: 7cm;
+    background-color: var(--main-color);
+    right: 10px;
+    top: 61px;
+    z-index: 4;
+    text-align: center;
+    padding: 10px 5px 9px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    display: none;
+}
+.what-about-dark-mode-msg-show{
+    display: block;
+}
+.what-about-dark-mode-msg::before{
+    content: '';
+    position: absolute;
+    border: 7px solid;
+    border-color: transparent transparent var(--main-color) transparent;
+    top: -14px;
+    right: 8px;
+
+}
+/* ___________________BAR CLOCK____________________________ */
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    margin-top: 1cm;
+    font-family: sans-serif;
+}
+.clock section{
+    width:1.8cm;
+    height: 1.8cm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+    border-radius: 50%;
+    background-color: #121a23;
+    font-size: 25px;
+    font-family: cursive;
+}
+.clock section .p{
+    font-size: 10px;
+    z-index: 1;
+}
+.clock .ampm{
+    transform: translate(-8px,-15px);
+}
+.clock .arrow{
+    width: 1.8cm;
+    border-radius: 50%;
+    height: 1.8cm;
+    position:absolute;
+    border: 2px solid #121a23;
+    border-left: 2px solid red;
+    transition: all 1s;
+}
+.clock .arrow::before{
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: red;
+    transform: translate(1px,6.5px);
+}
+.clock .s2 .arrow::before{
+    background-color:green;
+}
+.clock .s2 .arrow{
+    border-left: 2px solid green;
+}
+.clock .s3 .arrow::before{
+    background-color:#eace31;
+}
+.clock .s3 .arrow{
+    border-left: 2px solid #eace31;
+}
+#hours{
+    color: red;
+}
+#minutes{
+    color: green;
+}
+#seconds{
+    color: #eace31;
+}
+/* ___________________show more in main page______________________________ */
+.btn-more,
+.btn-more-show{
+    z-index: 500;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #121a23;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: none;
+}
+.btn-more-show{
+    display: flex;
+}
+.btn-more section{
+    width: 75%;
+    padding: 1cm;
+    margin: 0 auto;
+    background-color: #1c2733;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.406) ;
+    border-left: 4px solid var(--main-color);
+}
+.btn-more section span{
+    color: var(--main-color);
+}
+.btn-more section .logo-name{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.btn-more section img{
+    width: 100px;
+}
+.btn-more .closeMore{
+    position: relative;
+    width: 100%;
+    height: 5px;
+    margin-top: -20px;
+    direction: rtl;
+}
+.btn-more .closeMore1{
+    font-size: 25px;
+    cursor: pointer;
+    width: 1cm;
+}
+/*___________________ DESGIN 3 BOXES IN OFFER PAGE _____________________________________ */
+.product,.visual,.ui{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #121a23d4;
+    z-index: -5;
+    opacity: 0;
+    transition: all .7s;
+    overflow-y: scroll;
+}
+.product::-webkit-scrollbar{
+    width: .1px;
+}
+.visual::-webkit-scrollbar{
+    width: .1px;
+}
+.ui::-webkit-scrollbar{
+    width: .1px;
+}
+.product section,
+.visual section,
+.ui section{
+    width: 8cm;
+    height: 9cm;
+    background-color: #121a23;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.135);
+    border-radius: 10px;
+    margin: 1cm auto;
+    margin-top: 25vh;
+    padding: 10px;
+}
+.product section .title,
+.visual section .title,
+.ui section .title{
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 30px;
+}
+.product section h3,
+.visual section h3,
+.ui section h3{
+    color: var(--main-color);
+}
+.product section .title p,
+.visual section .title p,
+.ui section .title p{
+    color: antiquewhite;
+    font-size: 15px;
+    margin-bottom: 1cm;
+    margin-top: 15px;
+    margin-left: 0;
+}
+.product p,
+.visual p,
+.ui p{
+    margin-left: 10px;
+    color: #fff;
+}
+.product .fa-check,
+.visual .fa-check,
+.ui .fa-check{
+    color: rgb(255, 217, 171);
+    margin-right: 4px;
+}
+.product .fa-xmark,
+.visual .fa-xmark,
+.ui .fa-xmark{
+    position: absolute;
+    margin-left: 6.9cm;
+    font-size: 25px;
+    cursor: pointer;
+}
+/* ------------------------------------------ */
+@media(max-width:625px){
+    .btn-more section{
+        width: 90%;
+        padding: 1cm .5cm;
+    }
+    .btn-more section .logo-name{
+        display: block;
+    }
+    .btn-more section img{
+        margin-bottom: 10px;
+    }
+}
+@media(max-width:600px){
+    .point1{
+        display: none;
+    }
+}
+@media(max-width:345px){
+    .btn-more section h3{
+        font-size: 16px;
+    }
+}
